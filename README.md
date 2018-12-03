@@ -20,6 +20,7 @@ python filesserver.py
 ```
 
 # Snapshot
-![snapshot](http://p9fggfk3y.bkt.clouddn.com/20181203031332_fileserver_snapshot.png)
+
+![snapshot](https://raw.githubusercontent.com/xu3352/xu3352.github.io/master/assets/archives/20181203031332_fileserver_snapshot.png)
 
 
