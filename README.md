@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
 # Start Server
 
-Dependance: flask
+Dependency: flask
 
 ```
 python filesserver.py
