@@ -1,0 +1,115 @@
+
+body {
+    margin: 5px;
+    background-color:#FFFFFF;
+    font-size: 14px;
+}
+
+.search-form {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.search-form a {
+    margin-left: 10px;
+}
+
+input {
+    width: 120px;
+}
+input[type=file] {
+    width: 150px;
+}
+input.input-largerest {
+    width: 180px;
+}
+input.input-larger {
+    width: 120px;
+}
+input.input-middle {
+    width: 90px;
+}
+input.input-small {
+    width: 65px;
+}
+input.input-smallest {
+    width: 40px;
+}
+
+.foot {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.green {
+    color: green;
+}
+.red {
+    color: firebrick;
+}
+.bgred {
+    background-color: #E27A69;
+}
+a.operate {
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/** ************* backtop tool ************* **/
+.hide {
+    display: none;
+    opacity: 0;
+}
+.show {
+    display: block;
+    opacity: 1;
+}
+.sc-tool-backtop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    overflow: hidden;
+    width: 41px;
+    height: 41px;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+.sc-tool-backtop .sc-tool-name {
+    font-size: 14px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    background: #3aab4e;
+}
+/** ************* backtop tool ************* **/
+
+.pagination {
+    float: right;
+    margin: 2px 0;
+}
+.pagination-page-info {
+    float: right;
+    margin-top: 8px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.pagination-page-info b {
+    font-size: 140%;
+    color: #85D4FB;
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #85D4FB;
+    border-color: #85D4FB;
+}

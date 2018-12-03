@@ -1,0 +1,18 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="{{ url_for('index') }}">文件小工具</a>
+
+    <div class="dropdown" style="display:none;">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">首页</button>
+
+        <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item active" href="{{ url_for('index') }}">首页</a>
+        </div>
+    </div>
+
+    <!-- Links -->
+    <ul class="navbar-nav" style="display:none;">
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">首页</a></li>
+    </ul>
+</nav>

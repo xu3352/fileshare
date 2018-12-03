@@ -1,0 +1,33 @@
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='js/layer/layer.js') }}"></script>
+<script src="{{ url_for('static', filename='js/layer/extend/layer.ext.js') }}"></script>
+<script src="{{ url_for('static', filename='js/highcharts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/abigimage.jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/commonUtil.js', v=1.5) }}"></script>
+<script type="text/javascript">
+    $(function () {
+        var pageid = $("body").attr("id");
+        var isMobile = window.mobilecheck();
+
+        if (!isMobile) {
+            // 导航激活
+            $(".navbar-nav a").removeClass("active");
+            $(".navbar-nav a[href$='/"+pageid+"']").addClass("active");
+            if (pageid == 'index') $(".navbar-nav a:eq(0)").addClass("active");
+
+            $(".navbar-nav").fadeIn(1000);
+        } else {
+            // dropdown 导航
+            var $div = $(".navbar .dropdown");
+            $div.find("a").removeClass("active");
+            $div.find("a[href$='/"+pageid+"']").addClass("active");
+            if (pageid == 'index') $div.find("a:eq(0)").addClass("active");
+
+            $div.find("button").text($div.find("a.active").text());
+            $div.fadeIn(1000);
+        }
+    });
+</script>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no,width=device-width" />
+    <title>工具首页</title>
+    {% include 'include/css.html' %}
+</head>
+<body id="index">
+    {% include 'include/header.html' %}
+
+    <div class="container-fluid">
+        <div>
+            <h3></h3>
+
+            <form id="uploadForm" class="upload-files" action="{{ url_for('upload_file') }}" method=post enctype=multipart/form-data>
+                <p>
+                    选择文件:
+                    <input type=file name=file> &nbsp;&nbsp;
+
+                    <a href="javascript:" onclick="upload()" >上传文件</a>
+                    <span>{{ message }}</span>
+                </p>
+            </form>
+        </div>
+
+        <table class="table table-bordered table-hover data-grid" data-empty-msg="未查询到数据!">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>时间</th>
+                <th>文件列表</th>
+                <th>大小</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for item in file_list %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ item.mtime }}</td>
+                <td>{{ item.filename }}</td>
+                <td>{{ item.size }}</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" href="{{ url_for('download_file', filename=item.filename) }}" >下载</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+{% include 'include/js.html' %}
+<script type="text/javascript">
+    function upload() {
+        var file = $("input[name='file']").val();
+        if (file == '') {
+            layer.msg('请先选择文件!');
+            return;
+        }
+        layer.load(1, { shade: [0.1,'#fff'], time : 60*1000});
+        $('#uploadForm').submit();
+    }
+</script>
+</html>

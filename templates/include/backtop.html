@@ -1,0 +1,18 @@
+<!-- 返回顶部 -->
+<div class="sc-tool-backtop hide">
+    <span class="sc-tool-name">顶部</span>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $(".sc-tool-name").click(function () {
+            $("html, body").stop().animate({
+                scrollTop: 0
+            }, "500", "swing")
+        });
+    });
+    window.onscroll = function() {
+        var $s = $(".sc-tool-backtop");
+        var e = document.body.scrollTop || document.documentElement.scrollTop;
+        e > 200 ? $s.removeClass("hide").addClass("show") : $s.removeClass("show").addClass("hide")
+    }
+</script>
