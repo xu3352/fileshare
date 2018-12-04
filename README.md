@@ -1,7 +1,7 @@
 # Fileshare
-一个精简的Python版 上传/下载 的Web服务器
-
 a simple python file upload/download web server
+
+一个精简的Python版 上传/下载 的Web服务器
 
 上传的文件会放到 `uploads` 目录下, 按照创建时间倒序展示
 
@@ -9,6 +9,7 @@ a simple python file upload/download web server
 
 `filesserver.py` : chang the `port` as you like
 
+修改端口
 ```py
 if __name__ == "__main__":
     # server start up
